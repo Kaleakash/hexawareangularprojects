@@ -1,0 +1,6 @@
+<form #loginInfo="ngForm" 
+(submit)="validate(loginInfo.value)">
+UserName:<input type="text" name="user" ngModel><br/>
+Password:<input type="password" name="pass" ngModel><br/>
+<input type="submit" value="submit">
+</form>

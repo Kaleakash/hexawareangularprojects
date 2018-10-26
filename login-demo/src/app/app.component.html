@@ -1,0 +1,47 @@
+<div>
+<app-header></app-header>
+  <div *ngIf="flag">
+     <table border="2">
+          <tr>
+            <th>EmpId</th>
+            <th>EmpName</th>
+            <th>EmpSalary</th>
+           </tr>
+          <tr *ngFor="let emp of employees">
+                <td>{{emp.empId}}</td>
+                <td>{{emp.empName}}</td>
+                <td>{{emp.empSalary}}</td>
+          </tr>
+     </table>
+  </div>
+
+  Name is : {{name}}<br/>
+  <p>LName is <b [innerText]="lname"></b> </p><br/>
+  <input type="text" name="uname" value="Raj"/>
+  
+
+  <input type="button" value="Display Emp Info" 
+  (click)="fun()">
+  <br/>
+  {{msg}}<br/>
+  <h2>one way binding</h2>
+  <input type="text" name="fname" [value]="fullname"/><br/>
+  Full Name is {{fullname}}
+  <h2>Two way binding</h2>
+  <input type="text" name="age" [(ngModel)]="age"/><br/>
+  <br/>
+  
+  <br/>
+  Age is {{age}}
+  <h2>Login Page</h2>
+  <login></login>
+  <br/>
+  <input type="text" #abc (keyup)="0">
+    <br/> {{abc.value}}
+    <br/> <br/> <br/> <br/> <br/> <br/> 
+    <div *ngFor="let n of names" >
+        <li>{{n}}</li>
+    </div>
+</div>
+
+

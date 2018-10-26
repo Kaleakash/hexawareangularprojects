@@ -1,0 +1,15 @@
+<div>
+<p>postmethod works!</p>
+
+<form (submit)="validate(obj.value)" #obj="ngForm">
+  <label>Id</label>
+  <input type="text" name="id" ngModel/><br/>
+  <label>Name</label>
+  <input type="text" name="name" ngModel/><br/>
+  <label>Salary</label>
+  <input type="text" name="salary" ngModel/><br/>
+  <input type="submit" value="store"/>
+  <input type="reset" value="reset"/>
+</form>
+{{res}}
+</div>

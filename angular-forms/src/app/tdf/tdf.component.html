@@ -1,0 +1,28 @@
+<div>
+<form (submit)="validate(obj.value)" #obj="ngForm">
+  <label>UserName</label>
+  <input type="text" name="user" ngModel/><br/>
+  <label>Password</label>
+  <input type="password" name="pass" ngModel/><br/>
+  <input type="submit" value="store"/>
+  <input type="reset" value="reset"/>
+</form>
+  {{msg}}
+  <input type="button" value="call Service" 
+  (click)="callService()">
+
+  <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+      </tr>
+        <tr *ngFor="let emp of employees">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.salary}}</td>
+        </tr>
+  </table>
+  
+</div>
+

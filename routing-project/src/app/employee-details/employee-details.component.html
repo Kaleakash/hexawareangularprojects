@@ -1,0 +1,18 @@
+<div>
+  <h2>Emp Info</h2>
+  <table border="1">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Login</th>
+      </tr>
+      <tr *ngFor="let emp of employees">
+<td>{{emp.id}}</td>
+<td>{{emp.name}}</td>
+<td>{{emp.age}}</td>
+<td><input type="button" value="Login" 
+  (click)="openLogin(emp)"></td>
+      </tr>
+  </table>
+</div>
